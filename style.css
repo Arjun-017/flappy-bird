@@ -40,6 +40,7 @@ body{
 	left: 186px;
 	border-radius: 15px;
 	box-shadow: 0 5px #C0C0C0;
+	cursor: pointer;
 }
 #ready{
 	position: absolute;
