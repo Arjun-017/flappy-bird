@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+*{
+	margin: 0px; 
+	padding: 0px;
+}
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #444;
+}
+.start{
+	position: absolute;
+	background: url(images/back2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 500px;
+	height: 800px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+#banner{
+	position: absolute;
+	width: 460px;
+	height: auto;
+	top: 100px;
+}
+.play-button{
+	width: 128px;
+	height: 80px;
+	background: url(images/play-button.png);
+	background-size: 128px 80px;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 400px;
+	left: 186px;
+	border-radius: 15px;
+	box-shadow: 0 5px #C0C0C0;
+}
+#ready{
+	position: absolute;
+	top: 200px;
+	width: 460px;
+	height: 100px;
+	background: url(images/get-ready.png);
+	background-size: 320px 100px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: none;
+}
+.blink{
+	animation: blinking 2s linear 3;
+}
+.play-button:active{
+	box-shadow: 0 1px #C0C0C0;
+	transform: translateY(4px)
+}
+
+.game-container{
+	background: url('images/back1.png');
+	background-position: center;
+	background-size: 500px 800px;
+	width: 500px;
+	height: 800px;
+	position: absolute;
+	overflow: hidden;
+	display: none;
+
+}
+.bird{
+	width: 70px;
+	height: 50px;
+	position: absolute;
+	left: 30px;
+	top: 100px;
+}
+.bird-anim-fall{
+	animation: turndown 1s linear forwards;
+}
+.bird-anim-fly{
+	animation: turnup 1s linear forwards;
+}
+
+.pipe1{
+	width: 75px;
+	height: 200px;
+	background: url(images/pipe_up.png);
+	background-size: 75px 460px;
+	background-position-y: -260px;
+	position: relative;
+	top: 0px;
+	left: 500px;
+	animation: move 2.5s linear infinite;
+}
+.gap{
+	width: 50px;
+	height: 250px;
+	background: transparent;
+	position: relative;
+	top: 0px;
+	left: 500px;
+	animation: move 2.5s linear infinite;
+
+}
+.pipe2{
+	width: 75px;
+	height:  500px;
+	background: url(images/pipe_down.png);
+	background-size: 75px 460px;
+	position: relative;
+	top: 0px;
+	left: 500px;
+	animation: move 2.5s linear infinite;
+
+}
+.floor{
+	background: url(images/floor.png);
+	width: 100%;
+	height: 50px;
+	background-size: 150px 100px;
+	background-repeat: repeat;
+	position: absolute;
+	top: 750px;
+	left: 0px;
+}
+
+.score-board{
+	position: absolute;
+	right: 0;
+	top: 20px;
+}
+
+.score-board .score-text{
+	font-family: 'Press Start 2P', cursive;
+	font-size: 3rem;
+	color: white;
+}
+
+
+@keyframes move{
+	from{
+		left: 500px;
+	}
+	to{
+		left: -50px;
+	}
+}
+@keyframes turndown{
+	from{
+		transform: rotateZ(0deg);
+	}
+	to{
+		transform: rotateZ(90deg);
+	}
+}
+@keyframes turnup{
+	from{
+		transform: rotateZ(0deg);
+	}
+	to{
+		transform: rotateZ(-45deg);
+	}
+}
+@keyframes blinking{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}

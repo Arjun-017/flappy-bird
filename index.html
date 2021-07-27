@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Flappy Bird</title>
+</head>
+<body>
+	<div class="start">
+		<img src="images/flappy-bird.svg" alt="" id='banner'>
+		<div class="play-button" onclick="playClicked();">
+		</div>
+		<div id="ready"></div>
+
+	</div>
+	<div class="game-container">
+		<div class="bird"><img src="images/bird3.png" alt="" id = "bird-img" width="65" height="45"></div>
+		<div class="pipe1"></div>
+		<div class="gap"></div>
+		<div class="pipe2"></div>
+		<div class="floor"></div>
+		<div class="score-board"><h2 class="score-text">0</h2></div>
+	</div>
+	<script src="app.js" type="text/javascript" charset="utf-8" async defer></script>
+</body>
+</html> 
